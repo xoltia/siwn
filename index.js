@@ -25,7 +25,7 @@ function generateNumber() {
 function getTodaysNumber() {
     if (typeof number === 'undefined') {
         number = generateNumber();
-        interval = setInterval(() => number = generateNumber(), 86400);
+        interval = setInterval(() => number = generateNumber(), 1000 * 60 * 60 * 24);
         return number;
     }
     return number;
