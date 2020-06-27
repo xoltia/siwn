@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>YEP</title>
+    
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            {{#if dateReached}}
+            background: green;
+            {{else}}
+            background: red;
+            {{/if}}
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will I watch Naruto?</h1>
+    {{#if dateReached}}
+        <h2>YES</h2>
+        <h2>Reached on {{ dateReached }}</h2>
+    {{else}}
+        <h2>NO</h2>
+    {{/if}}
+    <h3>Todays number: {{number}} | Desired Number: {{desiredNumber}} | Max: {{maxNumber}}</h3>
+    <h4>Check again at: {{nextChange}}</h4>
+</body>
+</html>
